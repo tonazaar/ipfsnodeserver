@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
-var BookingSchema = new mongoose.Schema({
+var IpfsnodeSchema = new mongoose.Schema({
 
 	starttime: {
 		type: String,

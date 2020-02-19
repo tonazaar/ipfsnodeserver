@@ -159,7 +159,7 @@ createfactories() ;
 
 };
 
-exports.startnode = async function(req, res, next){
+exports.createfile = async function(req, res, next){
     var userid=req.params.userid;
 console.log(req.params);
 
@@ -180,16 +180,15 @@ var id ;
 
 }
 
-exports.stopnode = async function(req, res, next){
-}
-exports.getnodestatus = async function(req, res, next){
+exports.deletefile = async function(req, res, next){
 }
 
-exports.startnode = async function(req, res, next){
+exports.listfiles = async function(req, res, next){
 }
 
-exports.getipfsconfig = async function(req, res, next){
+exports.getusage = async function(req, res, next){
 }
+
 
 
 
