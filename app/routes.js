@@ -41,8 +41,8 @@ module.exports = function(app){
 
     apiRoutes.use('/ipfsnode', ipfsnodeRoutes);
     ipfsnodeRoutes.post('/getnodestatus',  IpfsnodeController.getnodestatus);
-    ipfsnodeRoutes.get('/startnode/:userid',  IpfsnodeController.startnode);
-    ipfsnodeRoutes.get('/stopnode/:userid',  IpfsnodeController.stopnode);
+    ipfsnodeRoutes.post('/startnode',  IpfsnodeController.startnode);
+    ipfsnodeRoutes.post('/stopnode',  IpfsnodeController.stopnode);
     ipfsnodeRoutes.post('/getipfsconfig',  IpfsnodeController.getipfsconfig);
 
     apiRoutes.use('/ipfsusage', ipfsusageRoutes);

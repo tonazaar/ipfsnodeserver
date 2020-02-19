@@ -140,13 +140,14 @@ console.log(ipfsd2.api.id())
 
 
 function createfactories() {
-factory1 = Ctl.createFactory({ type: 'js', 
+	console.log("create factory called");
+        factory1 = Ctl.createFactory({ type: 'js', 
 	ipfsOptions: {
         repo: '/home/rameshbn/ramipfs',
         config: config1
 		 },
 	test: true, disposable: true })
-factory2 = Ctl.createFactory({ type: 'js', 
+        factory2 = Ctl.createFactory({ type: 'js', 
 	ipfsOptions: {
         repo: '/home/rameshbn/ramipfs1',
         config: config2
@@ -154,16 +155,17 @@ factory2 = Ctl.createFactory({ type: 'js',
 	test: true, disposable: true })
 }
 
+createfactories() ;
 exports.initnode = async function(req, res, next){
 createfactories() ;
 
 };
 
 exports.startnode = async function(req, res, next){
-    var userid=req.params.userid;
-console.log(req.params);
-
+console.log(req.body);
 var id ;
+    var userid=req.body.userid;
+
    if(userid == 'user1') {
     await user1server() ;
     id = await ipfsd1.api.id();
