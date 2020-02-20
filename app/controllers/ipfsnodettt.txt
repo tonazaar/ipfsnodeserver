@@ -161,8 +161,9 @@ createfactories() ;
 
 };
 
-exports.startnodefun = async function(req, res){
-	
+exports.startnode = async function(req, res){
+    return res.send('Started nodes  ');
+	/*
 console.log(req.body);
 var id ;
     var userid=req.body.userid;
@@ -179,7 +180,7 @@ var id ;
    }   
     return res.send('Started nodes  ');
 
-
+*/
 
 }
 
@@ -188,6 +189,8 @@ exports.stopnode = async function(req, res, next){
 exports.getnodestatus = async function(req, res, next){
 }
 
+exports.startnode = async function(req, res, next){
+}
 
 exports.getipfsconfig = async function(req, res, next){
 }
