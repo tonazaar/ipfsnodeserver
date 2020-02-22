@@ -47,7 +47,7 @@ module.exports = function(app){
 
     apiRoutes.use('/ipfsusage', ipfsusageRoutes);
     ipfsusageRoutes.post('/getusage',  IpfsusageController.getusage);
-    ipfsusageRoutes.post('/createfile',  IpfsusageController.createfile);
+    ipfsusageRoutes.post('/savefile',  IpfsusageController.savefile);
     ipfsusageRoutes.post('/deletefile',  IpfsusageController.deletefile);
     ipfsusageRoutes.post('/listfiles',  IpfsusageController.listfiles);
 

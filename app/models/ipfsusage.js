@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
-var IpfsusagenSchema = new mongoose.Schema({
+var IpfsusageSchema = new mongoose.Schema({
 
 	starttime: {
 		type: String,
@@ -12,11 +12,22 @@ var IpfsusagenSchema = new mongoose.Schema({
 	activity: {
 		type: String,
 	},
-	file: {
+	name: {
 		type: String,
 		required: true
 	},
-	user: {
+	hash: {
+		type: String,
+	},
+	path: {
+		type: String,
+		required: true
+	},
+	cid: {
+		type: String,
+		required: true
+	},
+	userid: {
 		type: String,
 		required: true
 	},
