@@ -13,12 +13,14 @@ function setUserInfo(request){
 	return {
 		_id: request._id,
 		email: request.email,
+		userid: request.userid,
 		role: request.role
 	};
 }
 
 exports.login = function(req, res, next){
 
+        
 	var userInfo = setUserInfo(req.user);
 
 	res.status(200).json({
@@ -32,6 +34,8 @@ exports.register = function(req, res, next){
 
 	var email = req.body.email;
 	var password = req.body.password;
+	var userid = req.body.username + 'xxx'; 
+	var username = req.body.username ;
 	var role = req.body.role;
 
 
@@ -56,6 +60,8 @@ exports.register = function(req, res, next){
 
 		var user = new User({
 			email: email,
+			userid: userid,
+			username: username,
 			password: password,
 			role: role
 		});
@@ -97,7 +103,7 @@ exports.roleAuthorization = function(roles){
 			}
 
 			res.status(401).json({error: 'You are not authorized to view this content'});
-			return next('Unauthorized');
+			return next(res.status(401).json({error: 'You are not authorized to view this content'}));
 
 		});
 

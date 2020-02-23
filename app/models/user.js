@@ -13,10 +13,18 @@ var UserSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	username: {
+		type: String,
+		required: true
+	},
+	userid: {
+		type: String,
+		required: true
+	},
 	role: {
 		type: String,
-		enum: ['reader', 'creator', 'editor'],
-		default: 'reader'
+		enum: ['admin', 'user' ],
+		default: 'user'
 	}
 
 }, {
