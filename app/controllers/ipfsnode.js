@@ -65,6 +65,7 @@ exports.getipfsconfig = async function(req, res, next){
     };
 
   nodetype = req.body.nodetype;
+  var userid = req.body.userid;
 
   if(req.body.nodetype == 'clusternode') {
      basepath = '/cluster'+req.body.userid;
@@ -78,6 +79,7 @@ exports.getipfsconfig = async function(req, res, next){
   }
 
   var ipfsconfig = {
+      userid: userid,
       nodetype: nodetype,
       basepath : basepath,
       ipaddress: ipaddress,
