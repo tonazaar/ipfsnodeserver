@@ -14,6 +14,7 @@ function setUserInfo(request){
 		_id: request._id,
 		email: request.email,
 		userid: request.userid,
+		username: request.username,
 		role: request.role
 	};
 }
