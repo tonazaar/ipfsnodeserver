@@ -1,0 +1,34 @@
+{
+  "name":"alphapackage",
+  "peercontrol": {
+  },
+  "securitycontrol": {
+  },
+  "admincontrol": {
+  },
+  "monitoringcontrol": {
+  },
+  "billingdata": {
+  },
+  "gatewaydata": {
+  },
+  "publicandprivate" :{
+  },
+
+  "access": {
+	  "public": "true",
+	  "private": "false"
+  },
+  "usercontrol" : {
+	  "option": "true"
+  },
+  "usercontrolmethod" : {
+      "loginbased": "true",
+      "logintypecode": "logina01",
+      "couponbased": "true",
+      "coupontypecode": "couponp01",
+      "blockchainbased": "true",
+      "blockchaintypecode": "blockx01",
+  },
+
+}
